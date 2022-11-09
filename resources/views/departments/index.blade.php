@@ -1,11 +1,11 @@
 @extends('_layouts.app')
 
 @section('content')
-<div class="container-fluid">
+<div class="container">
   <div class="row justify-content-center">
     
     
-    <div class="col-8">
+    <div class="col-12">
       
       <a href="{{route('departments.create')}}" class="btn btn-secondary"><span class="cil-user btn-icon mr-2"></span> Add department</a>
       
@@ -25,7 +25,7 @@
           <td>{{$d->name}}</td>
           <td>{{$d->abbreviation}}</td>
           <td>{{$d->number_employees}}</td>
-          <td>{{$d->director->full_name}}</td>
+          <td>{{$d->director->full_name ?? 'n/a'}}</td>
           <td>{{$d->created_at}}</td>
           <td>{{$d->updated_at}}</td>
           <td>{{$d->deleted_at}}</td>
